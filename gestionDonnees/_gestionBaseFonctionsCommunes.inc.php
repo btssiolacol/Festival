@@ -66,6 +66,8 @@ function supprimerEtablissement($id)
       $query="SET CHARACTER SET utf8";
       // modification du jeu de caractères de la connexion
       $res=mysql_query($query, $connexion);
+      mysql_select_db($bd, $connexion);
+
 
       $req="delete from Etablissement where id='$id'";
       mysql_query($req,$connexion);
