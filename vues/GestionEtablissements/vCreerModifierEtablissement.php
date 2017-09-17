@@ -58,7 +58,7 @@ else
 $tabCivilite=array("Monsieur","Madame","Mademoiselle");  
 
 echo "
-<form method='POST' action='cGestionEtablissements.php?'>
+<form method='POST' action='cGestionEtablissements.php?'enctype='multipart/form-data' >
    <input type='hidden' value='$action' name='action'>
    <br>
    <table width='85%' cellspacing='0' cellpadding='0' class='tabNonQuadrille'>
@@ -140,6 +140,12 @@ echo "
            echo "
            </td>
          </tr>
+
+         <tr class='ligneTabNonQuad'>
+            <td> Photo établissement : </td>
+            <td><input type='file' name='fileToUpload'></td>
+         </tr>
+
          <tr class='ligneTabNonQuad'>
             <td colspan='2' ><strong>Responsable:</strong></td>
             
